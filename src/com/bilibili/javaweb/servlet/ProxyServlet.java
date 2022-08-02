@@ -20,7 +20,6 @@ public class ProxyServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         // 通过httpclient组件，发送HTTP GET请求，访问 TargetServlet
         HttpGet httpGet = new HttpGet("http://localhost:8081/b/target");
         httpGet.setHeader("Content-Type", "application/x-www-form-urlencoded");
